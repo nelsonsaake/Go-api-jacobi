@@ -1,0 +1,42 @@
+{{ define "tbo"}}
+    <table>
+{{ end }}
+
+
+
+{{ define "tbc"}}
+    </table>
+{{ end }}
+
+
+
+
+{{ define "th" }}
+    <tr>
+        <th>ith</th>
+        {{  range . }}
+            <th> {{ . }} </th>
+        {{ end }}
+    </tr>
+{{ end }}
+
+
+
+
+
+{{ define "tr" }}
+    {{ range $key, $value := . }}
+        <tr> 
+            <td> {{ $key }} </td>
+            {{ template "td" $value}} 
+        </tr>
+    {{ end }}
+{{end}}
+
+
+
+{{ define "td"}}
+    {{ range . }}
+    <td> {{ . |printf "%.6f" }} </td>
+    {{ end }}
+{{ end }}
