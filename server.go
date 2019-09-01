@@ -7,7 +7,7 @@ import (
 	"os"
 	"regexp"
 
-	"solve"
+	solve "projects/jacobi/solve"
 
 	"github.com/rs/cors"
 )
